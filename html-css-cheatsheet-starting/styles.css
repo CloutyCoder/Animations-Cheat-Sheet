@@ -1,0 +1,135 @@
+/* Navigation Bar */
+header nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  float: right;
+}
+
+header nav ul li {
+  float: left;
+  padding: 1px;
+  font-family: Helvetica;
+}
+
+a {
+  display: block;
+  padding: 8px;
+  background-color: #efefef;
+}
+
+/* Body */
+h1 {
+  font-family: Helvetica;
+  text-align: center;
+}
+
+h1, h2 {
+  color: lightblue;
+}
+
+strong {
+  letter-spacing: .015em;
+}
+
+.info {
+  background-color: lightgray;
+  border: 1px solid black;
+}
+
+.code {
+  float: right;
+  font-family: Courier;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0px;
+  background: black;
+  color: lightgreen;
+  height: 19%;
+  width: 400px;
+}
+
+.code-values {
+  float: right;
+  font-family: Courier;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0px;
+  background: black;
+  color: lightgreen;
+  height: 43%;
+  width: 400px;
+}
+
+.multiple-steps {
+  float: right;
+  font-family: Courier;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0px;
+  background: black;
+  color: lightgreen;
+  height: 19%;
+  width: 400px;
+}
+
+
+p {
+  font-family: Helvetica;
+}
+
+ul {
+  font-family: Helvetica;
+}
+
+table, th, td {
+  font-family: Helvetica;
+  border: 1px solid black;
+  
+}
+
+/* Background */
+body {
+  background-color: lightslategray;
+}
+
+/* Home Animated Rectangle */
+
+.element {
+  float: bottom;
+  height: 200px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: red;
+  animation-name: stretch;
+  animation-duration: 1.5s; 
+  animation-timing-function: ease-out; 
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
+
+@keyframes stretch {
+  0% {
+    transform: scale(.3);
+    background-color: lightpink;
+    border-radius: 100%;
+  }
+  50% {
+    background-color: lightblue;
+  }
+  100% {
+    transform: scale(1.5);
+    background-color: lightseagreen;
+  }
+}
+
+body,
+html {
+  height: 100%;
+}
+
+
+

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS | Animations</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a class="current" href="index.html">Home</a></li>
+        <li><a href="examples.html">Examples</a></li>
+        <li><a href="#">News</a></li>
+      </ul>
+    </nav><br>
+  </header>
+
+  <body>
+    <h1>CSS ANIMATIONS</h1>
+      <h2>Introduction</h2>
+        <p class="info">CSS allows the animation of HTML elements using Javascript<br><br>If you were wondering what exactly a CSS animation is, inquire no longer!<br><br>An animation lets an element gradually change from one style to another. The animation property in CSS can be used to animate many other CSS properties such as color, background-color, height or width. Each animation need to be defined with the <strong>@keyframes</strong> at-rule which is then called with the animation property like so:
+        </p>
+        <span class="code">.element {<br>
+          animation: pulse 5s infinite;<br>
+        }<br>
+        @keyframes pulse {<br>
+          0% {<br>
+            background-color: #001F3F;<br>
+          }<br>
+        100% {<br>
+          background-color: #FF4136;<br>
+        }<br>
+      }</span>
+
+
+      <h2>Sub-Properties</h2>
+        <ul id="sub-properties" class="info">
+          <li><strong>animation-name:</strong> declares the name of the <strong>@keyframes</strong> at-rule to manipulate.</li>
+          <li><strong>animation-duration:</strong> the length of time it takes for an animation to complete one cycle.</li>
+          <li><strong>animation-timing-function:</strong> establishes preset acceleration curves such as ease or linear.</li>
+          <li><strong>animation-delay:</strong> the time between the element being loaded and the start of the animation sequence.</li>
+          <li><strong>animation-direction:</strong> sets the direction of the animation after the cycle. Its default resets on each cycle.</li>
+          <li><strong>animation-iteration-count:</strong> the number of times the animation should be performed.</li>
+          <li><strong>animation-fill-mode:</strong> sets which values are applied before/after the animation.
+    For example, you can set the last state of the animation to remain on screen, or you can set it to switch back to before when the animation began.</li>
+          <li><strong>animation-play-state:</strong> pause/play the animation.</li>
+        </ul>
+        <div class="element"></div>
+        <p class="info">These sub-properties can be used like so:</p>
+
+        <span class="code-values">
+          @keyframes stretch {<br>
+            <em>/* declare animation actions here */</em><br>
+          }<br>
+
+          .element {<br>
+            animation-name: stretch;<br>
+            animation-duration: 1.5s;<br>
+            animation-timing-function: ease-out;<br>
+            animation-delay: 0s;<br>
+            animation-direction: alternate;<br>
+            animation-iteration-count: infinite;<br>
+            animation-fill-mode: none;<br>
+            animation-play-state: running;<br>
+          }<br>
+          <em>/*
+            is the same as:
+          */</em><br>
+          .element {<br>
+            animation:<br>
+            stretch<br>
+            1.5s<br>
+            ease-out<br>
+            0s<br>
+            alternate<br>
+            infinite<br>
+            none<br>
+            running;<br>
+          }
+        </span>
+
+    <h2>Values</h2>
+      <p class="info">This table depicts all of the values that can be attributed to the aforementioned sub-properties:</p>
+
+    <table id="values" class="info">
+      <body>
+        <tr>
+          <th>animation-timing-function</th>
+          <td>ease, ease-out, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) (e.g. cubic-bezier(0.5, 0.2, 0.3, 1.0))</td>
+        </tr>
+        <tr>
+          <th>animation-duration</th>
+          <td>Xs or Xms</td>
+        </tr>
+        <tr>
+          <th>animation-delay</th>
+          <td>Xs or Xms</td>
+        </tr>
+        <tr>
+          <th>animation-iteration-count</th>
+          <td>X</td>
+        </tr>
+        <tr>
+          <th>animation-fill-mode</th>
+          <td>forwards, backwards, both, none</td>
+        </tr>
+        <tr>
+          <th>animation-direction</th>
+          <td>normal, alternate</td>
+        </tr>
+        <tr>
+          <th>animation-play-state</th>
+          <td>paused, running, running</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Multiple Steps</h2>
+      <p class="info">If an animation has the same starting and ending properties, its useful to comma-seperate the 0% and 100% values inside <strong>@keyframes:</strong></p>
+
+    <h2>Multiple Animations</h2>
+      <p class="info">You can comma-seperate the values to declare multiple animations on a selector as well. In the example below, we want to change the color of the circle in a <strong>@keyframe</strong> whilst also nudging it from side to side with another.</p>
+
+    <h2>Performance</h2>
+      <p class="info">Animating most properties is a performance concern, so we should proceed with caution before animating any property. However, there are certain combinations that can be animated safely:</p>
+      
+      <ul class="info">
+        <li>transform: translate()</li>
+        <li>transform: scale()</li>
+        <li>transform: rotate()</li>
+        <li>opacity</li>
+      </ul>
+
+  </body>
+
+  <footer>
+  </footer>
+
+</html>
